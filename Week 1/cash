@@ -1,0 +1,53 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int calculate_quarters(int coins); // Prototypes
+int get_dimes(int coins);
+int get_nickels(int coins);
+int get_penny(int coins);
+
+int main(void)
+{
+    int coins;
+    do
+    { // To reprompt user until computer receives a valid input.
+        coins = get_int("Cents owed: ");
+    }
+    while (coins < 1);
+
+    int quarters = calculate_quarters(coins);
+    coins = coins - (quarters * 25); // To change the number of coins after return of quarters.
+
+    int dime = get_dimes(coins);
+    coins = coins - (dime * 10); // To change the number of coins after return of dimes.
+
+    int nickel = get_nickels(coins);
+    coins = coins - (nickel * 5); // To change the number of coins after reutrn of nickel.
+
+    int penny = get_penny(coins); // Remaining coins will be returned as penny.
+
+    int cents = quarters + nickel + penny +
+                dime; // To calculate total number of coins that need to be returned.
+
+    printf("%i\n", cents);
+}
+
+int calculate_quarters(int coins) // To determine how many quarters will be used.
+{
+    return coins / 25;
+}
+
+int get_dimes(int coins) // To determine how many dimes will be used.
+{
+    return coins / 10;
+}
+
+int get_nickels(int coins) // To determine how many nickels will be used.
+{
+    return coins / 5;
+}
+
+int get_penny(int coins) // To determine how many pennies will be used.
+{
+    return coins;
+}
