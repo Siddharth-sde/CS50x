@@ -2,9 +2,10 @@
 This repository is related to the projects made during Harvad's CS50x course.
 I'm using this repo to track my personal growth and share my experience.
 
+
 ## Week 0 -
 **Scratch** - It is an excellent way to learn complex topics such as loops,condiitonals etc in an interactive way.
-I built a interactive 2-D obstacle game. I was able to use conditionals, loops and collision detection effectively.
+I built an interactive 2-D obstacle game. I was able to use conditionals, loops and collision detection effectively.
 
 
 
